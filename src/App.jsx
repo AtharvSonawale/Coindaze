@@ -10,14 +10,18 @@ import AddTransaction from './components/AddTransaction';
 const App = () => {
   return (
     <Provider store={store}>
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4">CoinDaze Spend Tracker</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Balance />
-          <AddTransaction />
+      <div className="bg-slate-700">
+        <h1 className="m-4 text-2xl font-bold">Sagespender</h1>
+        <div className="flex">
+          <div className='float-left '>
           <Credit />
           <Debit />
           <TransactionHistory />
+          </div>
+          <div className='h-screen'>
+          <Balance />
+          <AddTransaction />
+          </div>
         </div>
       </div>
     </Provider>
